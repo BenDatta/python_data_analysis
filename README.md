@@ -14,7 +14,8 @@ A collection of my work exploring and visualizing datasets. This repository focu
 ## 🛠 Libraries Used
 - **Pandas**: Data loading, cleaning, and filtering.  
 - **Seaborn**: Statistical data visualization.  
-- **Matplotlib**: Customizing plot details and layouts.  
+- **Matplotlib**: Customizing plot details and layouts.
+- **PySpark**: Analyzed large datasets with distributed computing.  
 
 ---
 
