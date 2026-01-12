@@ -59,7 +59,6 @@ def gold_df(df):
     return location_summary, payment_summary, refund_summary
 
 
-
 # 1. Load and Clean
 raw_data = bronze_load(csv_path)
 clean_data = silver_transform(raw_data)
