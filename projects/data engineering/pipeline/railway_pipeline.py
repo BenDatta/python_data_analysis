@@ -1,5 +1,5 @@
-import pandas as pd
 from pathlib import Path
+import pandas as pd
 
 folder = Path(__file__).parent
 csv_path = folder / "../data/railway.csv"
