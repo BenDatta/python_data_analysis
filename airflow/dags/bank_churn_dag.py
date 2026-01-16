@@ -1,7 +1,10 @@
 from datetime import datetime, timedelta
-import pandas as pd
+
 from airflow import DAG
+
 from airflow.decorators import task
+
+import pandas as pd
 
 
 default_args = {

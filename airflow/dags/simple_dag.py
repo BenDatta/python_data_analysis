@@ -1,12 +1,14 @@
-from airflow import DAG
-from airflow.decorators import task
 from datetime import datetime, timedelta
+
+from airflow import DAG
+
+from airflow.decorators import task
 
 # Define settings
 my_settings = {
-    'owner': 'analytics_team',
-    'retries': 2,
-    'retry_delay': timedelta(minutes=5),
+    "owner": "analytics_team",
+    "retries": 2,
+    "retry_delay": timedelta(minutes=5),
 }
 
 with DAG(
@@ -15,7 +17,7 @@ with DAG(
     schedule="@daily",
     default_args=my_settings,
     catchup=False,
-    tags=["engineering"] # Must be a list []
+    tags=["engineering"],  # Must be a list []
 ) as dag:
 
     @task
