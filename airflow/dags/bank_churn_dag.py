@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
 
 import pandas as pd
+from airflow import DAG
 from airflow.decorators import task
 
-from airflow import DAG
 
 default_args = {
     "owner": "analytics_team",
@@ -23,8 +23,11 @@ with DAG(
     @task
     def extract_data():
         base_path = "/tmp/bank_churn"
-        file_path = "/Users/benjamin/Documents/GitHub/python_data_analysis/projects/data engineering/data/bank_churn/Bank_Churn_all_data.xlsx"
-
+        file_path = (
+            "/Users/benjamin/Documents/GitHub/python_data_analysis/projects/data engineering/"
+            "data/bank_churn/Bank_Churn_all_data.xlsx"
+        )
+        
         customer_path = f"{base_path}/customer.parquet"
         acc_path = f"{base_path}/account.parquet"
 
