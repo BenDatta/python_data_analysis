@@ -4,8 +4,8 @@ from airflow import DAG  # type: ignore
 from airflow.operators.python import PythonOperator  # type: ignore
 
 from data.flight_etl.bronze_ingest import get_flight_data
-from data.flight_etl.silver_transform import silver_transform
 from data.flight_etl.gold import run_gold_aggregate
+from data.flight_etl.silver_transform import silver_transform
 
 
 default_args = {
