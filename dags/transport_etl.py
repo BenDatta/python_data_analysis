@@ -20,12 +20,12 @@ with DAG(
 
     @task
     def extract_city_data() -> str:
-        return "data/city.csv"
+        return "data/transport_etl/city.csv"
 
     @task
     def city_silver(file_path: str) -> str:
         df = pd.read_csv(file_path)
-        output_path = "data/silver_data/city_silver.parquet"
+        output_path = "data/transport_etl/silver_data/city_silver.parquet"
         df.to_parquet(output_path, index=False)
         return output_path
 
